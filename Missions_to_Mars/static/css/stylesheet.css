@@ -1,0 +1,127 @@
+.comparison img:hover {
+  box-shadow: 0 0 25px 5px #aec5e0; 
+}
+
+.backround{
+    background-color:#b49e99;    
+}
+
+.backround_container{
+    background-color:rgba(248, 248, 248, 0.637);
+}
+
+.header{
+    font-size: 75px;
+    color:#7a0303;
+    margin-left: 10px;
+    padding: 4mm;
+}
+
+.center{
+    text-align: center;
+}
+
+.header-shadow {
+  text-shadow: 2px 2px 20px #000000;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+.navbar-dark{
+    background-color:#455579 ;
+}
+.box {
+    height: 400px;
+    padding: 20px;
+    color: #b49e99;
+    background: #b49e99;
+  }
+
+  
+  .boxlayout {
+    background-color: rgba(70, 41, 41, 0.637) ;
+    box-shadow: 2px 4px 8px rgba(105, 43, 32, 0.533);
+  }
+
+ 
+  .boxlayout2 {
+    background-color: rgba(242, 242, 242, 0.963) ;
+    padding: 10px;
+    margin-left: .6em;
+    padding: 10px;
+    box-shadow: 2px 4px 8px #8888;
+    
+  }
+
+
+  .left-temp{
+    padding: 10px;
+    float: left;
+    margin-right: 1em;
+  }
+
+  .fig-size-right{
+    height:10em;
+    width: 12em;
+    box-shadow: 2px 2px 8px #8888;
+  }
+
+  .fig-size-left{
+    height: 12em;
+    width: 13em;
+    box-shadow: 2px 2px 8px #8888;
+    
+  }
+
+  .fig-size-right-comp {
+    height:20em;
+    width: 30em;
+    box-shadow: 2px 2px 8px #8888;
+  }
+
+  .fig-size-right-temp {
+    height:20em;
+    width: 30em;
+    box-shadow: 2px 2px 8px #8888;
+  }
+
+
+  .grad {
+    background-image: linear-gradient(to top, #aec5e0, #97bae5);
+  }
+
+  .responsive {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .responsive-ind {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+.curs {
+  cursor: pointer;
+
+}
+
+.boxlayout {
+  background-color: rgba(242, 242, 242, 0.963) ;
+  
+  box-shadow: 2px 4px 8px #8888;
+}
+
+.shadow{
+  box-shadow: 20px 20px 20px 100px rgba(62, 211, 17, 0.533);
+}
+
+
+
+.glow-button:hover {
+  color: rgb(255, 2, 2);
+  box-shadow: 0 500px 500px rgba(145, 92, 182, .4);
+}
+

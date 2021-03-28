@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet"  href="static/css/stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body class ="backround">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  <div class="container-fuild">
+
+    <header class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="center">
+            <h1 class='center header' style="text-shadow: 2px 2px 5px #ecca0b;">Mission to Mars</h1>
+          <p><a class="btn btn-danger btn-lg shadow" href="/scrape" role="button">Scrape Mars!</a></p>
+        </div>
+        </div>
+      </div>
+    </header>
+    
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12" >
+        <h1>Latest News on Mars</h1>
+      </div>
+    </div>
+      
+    <div class= "row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2>{{ mars_data.news_title }}</h2>
+      </div>
+    </div>
+      
+    <div class= "row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <p style="font-size: 18px" >{{ mars_data.news_paragraph }}</p>
+      </div>
+    </div>
+
+    <div class= "row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <br> <br>
+        <h2>Featured Mars Image</h2>
+        <a class="glow-button" href="{{mars_data.featured_image_url}}">
+          <figure > 
+            <img class="shadow glow-button" style="max-width: 100%" src="{{mars_data.featured_image_url}}" alt="mars">  
+          </figure>
+        </a>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <br> <br>
+        <h3>Mars Facts</h3>
+        <table border="1" class="dataframe table responsive table-bordered border border-dark table table-sm">
+          <thead>
+            <tr style="text-align: left;">
+              <th></th>
+              <th>Mars</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Equatorial Diameter:</td>
+              <td>6,792 km</td>
+            </tr>
+            <tr> 
+              <td>Polar Diameter:</td>
+              <td>6,752 km</td>
+            </tr>
+            <tr>
+              <td>Mass:</td>
+              <td>6.39 × 10^23 kg (0.11 Earths)</td>
+            </tr>
+            <tr>
+              <td>Moons:</td>
+              <td>2 (Phobos &amp; Deimos)</td>
+            </tr>
+            <tr>
+              <td>Orbit Distance:</td>
+              <td>227,943,824 km (1.38 AU)</td>
+            </tr>
+            <tr>
+              <td>Orbit Period:</td>
+              <td>687 days (1.9 years)</td>
+            </tr>
+            <tr>
+              <td>Surface Temperature:</td>
+              <td>-87 to -5 °C</td>
+            </tr>
+            <tr>
+              <td>First Record:</td>
+              <td>2nd millennium BC</td>
+            </tr>
+            <tr>
+              <td>Recorded By:</td>
+              <td>Egyptian astronomers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>     
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <br> <br>
+        <div class="center">
+          <h2>Mars Hemispheres</h2>
+          <br> <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+        {% for i in mars_data.hemisphere_image_urls %}
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h3>
+              {{mars_data.hemisphere_image_urls[loop.index0].title}}
+            </h3>
+        
+            <figure class= "comparison"> 
+              <a href="{{mars_data.hemisphere_image_urls[loop.index0].img_url}}">
+                <img class="shadow" style="max-width: 100%" src="{{mars_data.hemisphere_image_urls[loop.index0].img_url}}" alt="mars">
+              </a>
+            </figure>
+          </div>
+        {% endfor %}
+    </div>
+
+    
+      
+    
+    
+  </div>
+
+
+</body>
+
+
+</html>
